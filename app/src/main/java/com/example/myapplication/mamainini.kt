@@ -75,3 +75,61 @@ fun ej11(){
 fun ej12(cadenacita : String) : String{
     return cadenacita.substring(2, 6)
 }
+
+fun ej13(){
+
+    var a :Any? = null
+    var b :Any? = null
+
+    try{
+        a as Int
+        b as Int
+
+        var c = a + b
+        var e = a - b
+        var f = a * b
+        var g = a / b
+    }catch (e : Exception){
+        println("No pueden hacer cosas con nulos ¬¬")
+    }
+}
+
+fun ej14(){
+    var a = 3 ?: -1
+}
+
+fun ej15(a : Any){
+
+    if (a is String){
+        print(a.length)
+    }
+
+}
+
+fun ej16(){
+
+    var a = 0
+    var b = 2
+
+    if (a == 0 || b == 0){
+        throw ArithmeticException("gilipollas")
+    }else{
+        print(a / b)
+    }
+
+}
+
+fun ej17(){
+
+}
+
+fun ej18(){
+
+    var a = readLine()
+    var b = readLine()
+
+    try {
+        var c = a?.toInt()
+        var d = b?.toInt()
+    }
+}
