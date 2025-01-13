@@ -108,7 +108,7 @@ fun ej15(a : Any){
 
 fun ej16(){
 
-    var a = 0
+    var a = 4
     var b = 2
 
     if (a == 0 || b == 0){
