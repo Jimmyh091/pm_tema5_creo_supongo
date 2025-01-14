@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import java.lang.ClassCastException
+
 fun main(){
 
 }
@@ -78,8 +80,8 @@ fun ej12(cadenacita : String) : String{
 
 fun ej13(){
 
-    var a :Any? = null
-    var b :Any? = null
+    var a : Any? = null
+    var b : Any? = null
 
     try{
         a as Int
@@ -94,8 +96,9 @@ fun ej13(){
     }
 }
 
-fun ej14(){
-    var a = 3 ?: -1
+fun ej14() : Int{
+    var a = 3
+    return a ?: -1
 }
 
 fun ej15(a : Any){
@@ -108,18 +111,38 @@ fun ej15(a : Any){
 
 fun ej16(){
 
-    var a = 4
-    var b = 2
+    var a = readLine()
+    var b = readLine()
 
-    if (a == 0 || b == 0){
-        throw ArithmeticException("gilipollas")
+    var aReal = 0
+    var bReal = 0
+
+    try {
+        aReal = a as Int
+        bReal = b as Int
+    }catch (e : Exception){
+        throw ClassCastException("no hagas esoo")
+    }
+
+    if (aReal == 0 || bReal == 0){
+        throw ArithmeticException("El operador es 0")
     }else{
-        print(a / b)
+        print(aReal / bReal)
     }
 
 }
 
 fun ej17(){
+
+    var a = readLine()
+    var aDura : Any
+
+    try {
+        aDura = a as Int
+    }catch (e : Exception){
+        throw ClassCastException("NO HAGAS ESOOo")
+    }
+
 
 }
 
@@ -131,5 +154,7 @@ fun ej18(){
     try {
         var c = a?.toInt()
         var d = b?.toInt()
+    }catch (e : Exception){
+
     }
 }
