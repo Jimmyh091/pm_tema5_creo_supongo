@@ -158,3 +158,48 @@ fun ej18(){
 
     }
 }
+
+fun ej19(a : Any){
+
+    try {
+        var aDura = a as Int
+        print("$aDura + 3 = ${a + 3}")
+    }catch (e : Exception){
+        print("El mensaje es $a")
+    }
+
+    if (a is Int){
+        print("$a + 3 = ${a + 3}")
+    }else{
+        print("el mensaje recibido es $a")
+    }
+
+}
+
+fun ej20(){
+
+    try {
+        var a = "kiasjufh"
+        var b = a + 3
+        print(a + b)
+    }catch (e : Exception){
+        print("puto")
+    }finally {
+        print("finalmente")
+    }
+
+}
+
+fun ej21(){
+
+    class Point (var x1 : Double, var y1 : Double){
+
+        infix fun calcularDistancia(xy : List<Float>) : Float{
+            return Math.sqrt(Math.pow(xy[0] - x1 , 2.0) + Math.pow(xy[1] - y1, 2.0)).toFloat()
+        }
+
+    }
+
+}
+
+fun ej22()
