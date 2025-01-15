@@ -1,9 +1,10 @@
 package com.example.myapplication
 
+import android.util.Log
 import java.lang.ClassCastException
 
 fun main(){
-
+    ej27()
 }
 
 fun ej1(cadena : String) : Int{
@@ -71,7 +72,11 @@ fun ej10(cadenacita1 : String, cadenacita2 : String) : String {
 }
 
 fun ej11(){
-    // ???????????????????
+
+    var nombre = "Jiame"
+    var edad = 198
+
+    print("Hola me llamo %s y tengo %i anos".format(nombre, edad))
 }
 
 fun ej12(cadenacita : String) : String{
@@ -250,4 +255,25 @@ fun ej25(){
     }
 }
 
-fun ej26()
+fun ej26(){
+
+    var a : String? = ""
+
+    a.let {
+        if (a != null) {
+            println(a.length)
+        }
+    }
+}
+
+fun ej27(){
+    var a = listOf(3,4,5,6,7,7,8,989,9,98,78,67,56,4)
+
+
+    a.forEach {
+        it + 1
+    }.also {
+        print(it)
+    }
+
+}
