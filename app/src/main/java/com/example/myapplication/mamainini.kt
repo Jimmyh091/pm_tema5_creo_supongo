@@ -202,4 +202,52 @@ fun ej21(){
 
 }
 
-fun ej22()
+fun ej22(){
+
+    val a by lazy { 3 + 4 }
+    lateinit var b : String
+
+    b = "la suma de 3 + 4 es $a"
+}
+
+fun ej23(){
+
+    var a = ""
+
+    with(a){
+        StringBuilder("Esta es la primera linea")
+        StringBuilder("vamos a la segunda")
+        StringBuilder("alkjsfhaksejf")
+    }
+
+    print(a)
+}
+
+fun ej24(){
+
+    class Person(var name : String = "", var age : Int = 0, var address : String = "Francia")
+
+    var manu = Person()
+
+    manu.apply {
+        name = "manu"
+        age = 23
+        address = "ESPAÑA JODER"
+    }
+
+}
+
+fun ej25(){
+
+    class Rectangl(var altura : Float = 0f, var anchura : Float = 0f)
+
+    var rctngl = Rectangl()
+
+    rctngl.run {
+        altura = 3f
+        anchura = 5f
+        print("El area es ${altura * anchura}")
+    }
+}
+
+fun ej26()
